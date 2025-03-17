@@ -1,0 +1,14 @@
+[Unit]
+Description=Stress-ng Load Generator
+After=network.target
+
+[Service]
+ExecStart=/home/brennah1104/linux_dashboard_project/stress-ng.sh
+Restart=always
+User=root
+WorkingDirectory=/home/brennah1104/linux_dashboard_project
+StandardOutput=append:/home/brennah1104/linux_dashboard_project/stress-ng.log
+StandardError=append:/home/brennah1104/linux_dashboard_project/stress-ng.log
+
+[Install]
+WantedBy=multi-user.target
