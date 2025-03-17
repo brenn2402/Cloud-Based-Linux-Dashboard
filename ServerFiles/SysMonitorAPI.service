@@ -1,0 +1,12 @@
+[Unit]
+Description=Monitoring API Service
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/python3 /home/brennah1104/linux_dashboard_project/SysMonitorAPI.py
+Restart=always
+WorkingDirectory=/home/brennah1104/linux_dashboard_project/
+
+[Install]
+WantedBy=multi-user.target
